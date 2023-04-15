@@ -3,8 +3,8 @@ import random
 
 
 '''
-Arkei na allaxthoun oi metavlites X,Y,CENTERS,POINTS 
-stis times pou perilamvanei h epithimith dokimh 
+You can change the variables: X,Y,CENTERS,POINTS 
+to the values you want 
 '''
 
 #variables used as constants
@@ -91,15 +91,15 @@ def ManhattanDistance(x,y):
 def CDBForEveryPoint(lst):
     
     '''
-        Omadopoiei ta shmeia vasei ths 
-        apostashs tous apo to kontinotero kentro tous 
-        kai gyrnaei mia lista me to ekastote cluster 
-        kai ta shmeia tou
+         It groups the points based on their distance from 
+         their nearest center
+         and it returns a list of each cluster
+         and its points
         
-        Shmeiwsh: tis kenes thesei tou cluster tis kaliptei me '-1'
-        Se kathe periptwsh, to synolo twn thesewn twn shmeiwn pou 
-        katalamvanetai gia ta points
-        tou kathe cluster antistoixei ston arithmo twn points pou exoun oristei 
+         Note: the spaces of the cluster cover them with '-1'
+         In each case, the set of positions of the points which
+         taken for the points
+         of each cluster corresponds to the number of points that have been set
     '''
     
     
@@ -240,12 +240,12 @@ def updateGlobalLists(cp):
 def mapInitialization():
     
     '''
-    1) Printarei ta arxika dedomena
-    2) Thetei tyxaia panw sto epipedo osa shmeia exoun zhththei apo ton xrhsth
-    3) Thetei tyxaia panw sto epipedo osa kentra exoun zhththei apo ton xthsth
+     1) prints the starting data
+     2) The number of points requested by the user is randomly placed on the grid
+     3) The number of centers requested by the builder is randomly placed on the grid
     
-    Return:
-        Kanei return mia lista me ta arxikopoihmena kentra
+     Return:
+         Returns a list of initialized centers
     '''
     
     printStartingData() 
@@ -282,33 +282,5 @@ def main():
 
     print("k-means finished.")
         
-      
-
     
 main()
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
